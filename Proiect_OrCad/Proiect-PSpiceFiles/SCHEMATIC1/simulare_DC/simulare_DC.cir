@@ -1,0 +1,24 @@
+** Profile: "SCHEMATIC1-simulare_DC"  [ c:\users\stefa\onedrive\desktop\proiect cad\proiect\proiect-pspicefiles\schematic1\simulare_dc.sim ] 
+
+** Creating circuit file "simulare_DC.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../librarii/led_alb/led_alb.lib" 
+.LIB "../../../librarii/led_albastru/led_albastru.lib" 
+.LIB "../../../librarii/led_galben/led_galben.lib" 
+.LIB "../../../librarii/led_portocaliu/led_portocaliu.lib" 
+.LIB "../../../librarii/led_rosu/led_rosu.lib" 
+* From [PSPICE NETLIST] section of D:\OrCad_WorkingDirectory\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC LIN PARAM lux 0 1000 1 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+.END

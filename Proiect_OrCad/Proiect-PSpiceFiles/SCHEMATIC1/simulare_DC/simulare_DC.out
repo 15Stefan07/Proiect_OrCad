@@ -1,0 +1,281 @@
+
+**** 08/03/22 18:53:19 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-simulare_DC"  [ c:\users\stefa\onedrive\desktop\proiect cad\proiect\proiect-pspicefiles\schematic1\simulare_
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "simulare_DC.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../librarii/led_alb/led_alb.lib" 
+.LIB "../../../librarii/led_albastru/led_albastru.lib" 
+.LIB "../../../librarii/led_galben/led_galben.lib" 
+.LIB "../../../librarii/led_portocaliu/led_portocaliu.lib" 
+.LIB "../../../librarii/led_rosu/led_rosu.lib" 
+* From [PSPICE NETLIST] section of D:\OrCad_WorkingDirectory\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC LIN PARAM lux 0 1000 1 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source PROIECT
+R_R1         +VCC OUT+ R_R1 69.8k TC=0,0 
+.model        R_R1 RES R=1 DEV=1% TC1=0 TC2=0
+R_R2         OUT+ 0  {R} TC=0,0 
+R_R3         +VCC OUT- R_R3 69.8k TC=0,0 
+.model        R_R3 RES R=1 DEV=1% TC1=0 TC2=0
+R_R4         OUT- 0 R_R4 69.8k TC=0,0 
+.model        R_R4 RES R=1 DEV=1% TC1=0 TC2=0
+V_VCC         +VCC 0 17Vdc
+V_-VCC         -VCC 0 -17Vdc
+X_U1         OUT+ N00929 +VCC -VCC N00929 uA741
+X_U2         OUT- N00866 +VCC -VCC N00866 uA741
+X_U3         N00969 N01192 +VCC -VCC OUT_DIF uA741
+R_R6         0 N00969 R_R6 73.2k TC=0,0 
+.model        R_R6 RES R=1 DEV=1% TC1=0 TC2=0
+R_R5         N00969 N00929 R_R5 10k TC=0,0 
+.model        R_R5 RES R=1 DEV=1% TC1=0 TC2=0
+R_R7         N01192 N00866 R_R7 10k TC=0,0 
+.model        R_R7 RES R=1 DEV=1% TC1=0 TC2=0
+R_R8         OUT_DIF N01192 R_R8 73.2k TC=0,0 
+.model        R_R8 RES R=1 DEV=1% TC1=0 TC2=0
+X_U4         N01965 3V +VCC -VCC 3V uA741
+R_R11         0 N01965 R_R11 3.01k TC=0,0 
+.model        R_R11 RES R=1 DEV=1% TC1=0 TC2=0
+R_R10         N01965 +VCC R_R10 14k TC=0,0 
+.model        R_R10 RES R=1 DEV=1% TC1=0 TC2=0
+X_U5         N02814 N02838 +VCC -VCC OUT_SUMATOR uA741
+R_R12         3V N02814 R_R12 1k TC=0,0 
+.model        R_R12 RES R=1 DEV=1% TC1=0 TC2=0
+R_R9         OUT_DIF N02814 R_R9 1k TC=0,0 
+.model        R_R9 RES R=1 DEV=1% TC1=0 TC2=0
+R_R14         N02838 OUT_SUMATOR R_R14 1k TC=0,0 
+.model        R_R14 RES R=1 DEV=1% TC1=0 TC2=0
+R_R13         0 N02838 R_R13 1k TC=0,0 
+.model        R_R13 RES R=1 DEV=1% TC1=0 TC2=0
+X_U6         OUT_SUMATOR N04056 +VCC -VCC N04418 uA741
+X_U7         OUT_SUMATOR N04068 +VCC -VCC N05327 uA741
+X_U8         OUT_SUMATOR N04080 +VCC -VCC N05339 uA741
+X_U9         OUT_SUMATOR N04092 +VCC -VCC N05351 uA741
+R_R18         N04068 N04056  1.5k TC=0,0 
+R_R17         N04080 N04068  1.13k TC=0,0 
+R_R16         N04092 N04080  3.32k TC=0,0 
+R_R15         N04092 +VCC  7.87k TC=0,0 
+R_R19         N04056 0  3.09k TC=0,0 
+R_R20         N04875 +VCC  750 TC=0,0 
+D_D1          N04875 0 led_rosu 
+D_D2          N05266 0 led_portocaliu 
+R_R21         N05266 N04418  732 TC=0,0 
+D_D3          N05420 0 led_galben 
+R_R22         N05420 N05327  732 TC=0,0 
+D_D4          N05539 0 led_albastru 
+R_R23         N05539 N05339  681 TC=0,0 
+D_D5          N05659 0 led_alb 
+R_R24         N05659 N05351  665 TC=0,0 
+.PARAM  lux=300 r={(({lux}+2500)*1k)/40}
+
+**** RESUMING simulare_DC.cir ****
+.END
+
+**** 08/03/22 18:53:19 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-simulare_DC"  [ c:\users\stefa\onedrive\desktop\proiect cad\proiect\proiect-pspicefiles\schematic1\simulare_
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               led_alb         led_albastru    led_galben      led_portocaliu  
+          IS  834.950000E-15  919.490000E-15   47.682000E-18   40.398000E-12 
+           N    5               5               2.306           3.9363       
+          RS   21.114           5.9449          4.1984          2.1363       
+
+
+               led_rosu        X_U1.dx         X_U1.dy         X_U2.dx         
+          IS   10.000000E-21  800.000000E-18  800.000000E-18  800.000000E-18 
+           N    1.6833                                                       
+          RS    8.4508          1               1.000000E-03    1            
+         CJO                                   10.000000E-12                 
+
+
+               X_U2.dy         X_U3.dx         X_U3.dy         X_U4.dx         
+          IS  800.000000E-18  800.000000E-18  800.000000E-18  800.000000E-18 
+          RS    1.000000E-03    1               1.000000E-03    1            
+         CJO   10.000000E-12                   10.000000E-12                 
+
+
+               X_U4.dy         X_U5.dx         X_U5.dy         X_U6.dx         
+          IS  800.000000E-18  800.000000E-18  800.000000E-18  800.000000E-18 
+          RS    1.000000E-03    1               1.000000E-03    1            
+         CJO   10.000000E-12                   10.000000E-12                 
+
+
+               X_U6.dy         X_U7.dx         X_U7.dy         X_U8.dx         
+          IS  800.000000E-18  800.000000E-18  800.000000E-18  800.000000E-18 
+          RS    1.000000E-03    1               1.000000E-03    1            
+         CJO   10.000000E-12                   10.000000E-12                 
+
+
+               X_U8.dy         X_U9.dx         X_U9.dy         
+          IS  800.000000E-18  800.000000E-18  800.000000E-18 
+          RS    1.000000E-03    1               1.000000E-03 
+         CJO   10.000000E-12                   10.000000E-12 
+
+
+**** 08/03/22 18:53:19 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-simulare_DC"  [ c:\users\stefa\onedrive\desktop\proiect cad\proiect\proiect-pspicefiles\schematic1\simulare_
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.qx         X_U2.qx         X_U3.qx         X_U4.qx         
+               NPN             NPN             NPN             NPN             
+       LEVEL    1               1               1               1            
+          IS  800.000000E-18  800.000000E-18  800.000000E-18  800.000000E-18 
+          BF   93.75           93.75           93.75           93.75         
+          NF    1               1               1               1            
+          BR    1               1               1               1            
+          NR    1               1               1               1            
+         ISS    0               0               0               0            
+          RE    0               0               0               0            
+          RC    0               0               0               0            
+         CJE    0               0               0               0            
+         VJE     .75             .75             .75             .75         
+         CJC    0               0               0               0            
+         VJC     .75             .75             .75             .75         
+         MJC     .33             .33             .33             .33         
+        XCJC    1               1               1               1            
+         CJS    0               0               0               0            
+         VJS     .75             .75             .75             .75         
+          KF    0               0               0               0            
+          AF    1               1               1               1            
+          CN    2.42            2.42            2.42            2.42         
+           D     .87             .87             .87             .87         
+
+
+               X_U5.qx         X_U6.qx         X_U7.qx         X_U8.qx         
+               NPN             NPN             NPN             NPN             
+       LEVEL    1               1               1               1            
+          IS  800.000000E-18  800.000000E-18  800.000000E-18  800.000000E-18 
+          BF   93.75           93.75           93.75           93.75         
+          NF    1               1               1               1            
+          BR    1               1               1               1            
+          NR    1               1               1               1            
+         ISS    0               0               0               0            
+          RE    0               0               0               0            
+          RC    0               0               0               0            
+         CJE    0               0               0               0            
+         VJE     .75             .75             .75             .75         
+         CJC    0               0               0               0            
+         VJC     .75             .75             .75             .75         
+         MJC     .33             .33             .33             .33         
+        XCJC    1               1               1               1            
+         CJS    0               0               0               0            
+         VJS     .75             .75             .75             .75         
+          KF    0               0               0               0            
+          AF    1               1               1               1            
+          CN    2.42            2.42            2.42            2.42         
+           D     .87             .87             .87             .87         
+
+
+               X_U9.qx         
+               NPN             
+       LEVEL    1            
+          IS  800.000000E-18 
+          BF   93.75         
+          NF    1            
+          BR    1            
+          NR    1            
+         ISS    0            
+          RE    0            
+          RC    0            
+         CJE    0            
+         VJE     .75         
+         CJC    0            
+         VJC     .75         
+         MJC     .33         
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          KF    0            
+          AF    1            
+          CN    2.42         
+           D     .87         
+
+
+**** 08/03/22 18:53:19 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-simulare_DC"  [ c:\users\stefa\onedrive\desktop\proiect cad\proiect\proiect-pspicefiles\schematic1\simulare_
+
+
+ ****     Resistor MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               R_R1            R_R3            R_R4            R_R6            
+           R    1               1               1               1            
+
+
+               R_R5            R_R7            R_R8            R_R11           
+           R    1               1               1               1            
+
+
+               R_R10           R_R12           R_R9            R_R14           
+           R    1               1               1               1            
+
+
+               R_R13           
+           R    1            
+
+
+
+          JOB CONCLUDED
+
+**** 08/03/22 18:53:19 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-simulare_DC"  [ c:\users\stefa\onedrive\desktop\proiect cad\proiect\proiect-pspicefiles\schematic1\simulare_
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  License check-out time            =        1.23
+  Total job time (using Solver 1)   =         .48
+
